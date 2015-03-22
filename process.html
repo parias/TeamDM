@@ -1,0 +1,15 @@
+<html>
+<?php   
+   # print "Your URL is  ". $_POST["url"];
+
+    $url = $_POST["url"];
+   
+    $mystring = exec("python wordExtract.py $url", $output, $val);
+    
+  echo '<table></tr>';  
+foreach ($output as $word)
+       echo '<td>', $word, '</td>';
+  echo '</tr></table';
+    
+?>
+</html>
